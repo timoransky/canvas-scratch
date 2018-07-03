@@ -1,7 +1,7 @@
 # canvas-scratch
 JavaScript plugin for scratch effect.
 
-![Demo](/demo_image.png =250x250)
+![Demo](/demo_image.png)
 
 ## Usage
 
