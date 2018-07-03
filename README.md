@@ -7,9 +7,8 @@ JavaScript plugin for scratch effect.
 
 ### Install:
 
-    bower install canvas-scratch
-
-...or manual.
+    ... just manual. for now.
+    ...
 
 ### Example:
 
@@ -18,6 +17,8 @@ scratch({
     wrapper: document.getElementById('scratch'),
     imageUrl: 'scratch.jpg',
     lineWidth: 60,
+    useBrush: true,
+    autoScratch: true,
     mode: scratch.MODE_WITHOUT_MOUSEDOWN,
     onInit: function() { ... },
     onComplete: function() { ... },
@@ -27,17 +28,19 @@ scratch({
 });
 ```
 
-### Including:
-* As AMD or CommonJS module.
-* Traditional <code>&lt;script src="..."&gt;</code> including makes <var>scratch</var> golobal.
-
 ## Configuration
 
 <i>DOMElement</i> <b>wrapper</b> (required) - a DOM element where the canvas will be placed.
 
 <i>string</i> <b>imageUrl</b> (required) - path to an image that will be scratched. Canvas will be resized to the image width & height.
 
-<i>int</i> <b>lineWidth</b> (required)
+<i>int</i> <b>lineWidth</b> (optional)
+
+<i>boolean</i> <b>useBrush</b> (optional)
+
+<i>boolean</i> <b>autoScratch</b> (optional)
+
+<i>object</i> <b>autoScratch: {delay: 5000}</b> (optional) - delay in miliseconds
 
 <b>mode</b> (required):
 * scratch.MODE_WITH_MOUSEDOWN
@@ -53,17 +56,6 @@ scratch({
 ## Browser requirements
 
 * [Canvas support](http://caniuse.com/#feat=canvas)
-
-## Run an example
-
-You can faced with Cross-Origin issue while running a demo on your local machine.
-So you have to run a demo on any web server.
-
-For example, you can run simple [Node.js HTTP Server](https://www.npmjs.com/package/http-server):
-
-    npm install http-server -g
-
-    http-server
 
 ## License
 
